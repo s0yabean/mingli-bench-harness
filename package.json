@@ -1,0 +1,26 @@
+{
+  "name": "mingli-bench-harness",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Evaluation harness that runs an AI agent against MingLi-Bench (Bazi (Chinese astrology) multiple-choice questions) with majority-vote scoring, trimmed means, cost tracking and a results report.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=22.9" },
+  "scripts": {
+    "quickstart": "node --env-file-if-exists=.env --import tsx src/cli.ts --sut mock --sample 5 --fresh --out quickstart",
+    "bench": "node --env-file-if-exists=.env --import tsx src/cli.ts",
+    "score:published": "node --import tsx src/cli.ts --score --in results/published/kimi-k2.5-2025x5.jsonl --rounds 5 && node --import tsx src/cli.ts --score --in results/published/kimi-k2.5-all.jsonl --rounds 1",
+    "test": "node --import tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "data:verify": "sh scripts/download-mingli-bench.sh --verify"
+  },
+  "dependencies": {
+    "ai": "6.0.116",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.7.0"
+  }
+}

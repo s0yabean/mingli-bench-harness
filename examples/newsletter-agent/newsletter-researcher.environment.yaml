@@ -1,0 +1,7 @@
+# Managed Agents environment for the newsletter research agent.
+
+name: modern-shrine-newsletter-env
+config:
+  type: cloud
+  networking:
+    type: unrestricted
