@@ -1,5 +1,7 @@
 # mingli-bench-harness
 
+[![CI](https://github.com/s0yabean/mingli-bench-harness/actions/workflows/ci.yml/badge.svg)](https://github.com/s0yabean/mingli-bench-harness/actions/workflows/ci.yml)
+
 A harness that runs an AI agent against MingLi-Bench, a benchmark of 160 multiple-choice Bazi (Chinese astrology) questions about real people, and reports accuracy, answer stability, latency and cost.
 
 ## The problem
